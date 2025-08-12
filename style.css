@@ -1,27 +1,34 @@
+/* Reseteo básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Fondo general */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #004E92 0%, #000428 100%);
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
+/* Contenedor principal */
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
     background: white;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
+/* Encabezado */
 header {
-    background: linear-gradient(45deg, #FF686B, #4ECDC4);
+    background: linear-gradient(45deg, #FF7E00, #007ACC);
     color: white;
     padding: 30px;
     text-align: center;
@@ -32,56 +39,12 @@ header h1 {
     margin-bottom: 10px;
 }
 
+/* Contenido principal */
 main {
     padding: 40px;
 }
 
-.contador {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.contador h2 {
-    color: #333;
-    margin-bottom: 20px;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    padding: 20px;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-}
-
-header {
-    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
-    color: white;
-    padding: 30px;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-main {
-    padding: 40px;
-}
-
+/* Contador */
 .contador {
     text-align: center;
     margin-bottom: 40px;
@@ -94,12 +57,13 @@ main {
 
 #contador {
     font-size: 3em;
-    color: #FF6B6B;
+    color: #FF7E00;
     font-weight: bold;
 }
 
+/* Botones */
 button {
-    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    background: linear-gradient(45deg, #007ACC, #FF7E00);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -107,27 +71,53 @@ button {
     border-radius: 25px;
     font-size: 1.1em;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 122, 204, 0.4);
 }
 
+/* Tarjetas de estado */
 .status-card {
     background: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
-    border-left: 5px solid #4ECDC4;
+    border-left: 5px solid #007ACC;
+    margin-bottom: 20px;
 }
+
 .status-card p {
     margin: 10px 0;
     font-size: 1.1em;
 }
 
+/* Pie de página */
 footer {
-    background: #333;
+    background: #000428;
     color: white;
     text-align: center;
     padding: 20px;
+    font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    #contador {
+        font-size: 2.2em;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
 }
